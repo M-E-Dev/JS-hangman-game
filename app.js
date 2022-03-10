@@ -11,6 +11,7 @@ const finalMessReveal = document.querySelector("#final-message-reveal-word");
 playBtn.addEventListener("click", () => {
     location.reload();
 });
+
 popupContainer.style.display = "none";
 let word;
 // let wordLen;
@@ -119,4 +120,8 @@ window.addEventListener("keyup", (event) => {
     }
     
     wordArea.innerHTML = placeHolder.join("");
+
+    if (event.keyCode === 13) {
+        location.reload();
+    }
 });
